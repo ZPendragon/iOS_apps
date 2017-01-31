@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Spotify-ObjC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F938A3031D4B974B00EC743D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F938A31F1D4B974B00EC743D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F938A32A1D4B974B00EC743D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
