@@ -1,0 +1,27 @@
+Climately Refactor
+
+Currently, all code for Climately lives in one file: ViewController.swift
+
+The goal is to apply MVC and/or MVVM to create a well architected app that follows the SOLID principles of OOD.
+
+So, what does the app do?
+
+The app opens and prompts the user to enter an address (city, state)
+
+Pressing and holding 'Get Weather' sends a web request to WeatherUndergroud's API and populates several fields and displays an image. 
+
+These fields include:
+	- Summary
+	- Temperature
+	- Humidity
+	- Precipitation
+	- Wind
+	- FeelsLike
+
+
+Classes
+	NetworkRequestManager
+	WeatherReport
+	WeatherImage
+	
+		
