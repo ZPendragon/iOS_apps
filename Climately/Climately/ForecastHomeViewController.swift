@@ -9,62 +9,85 @@
 import UIKit
 import CoreLocation
 
-class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
+class ForecastHomeViewController: UIViewController {
     
-    // MARK: Properties
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    /**
+        - Home screen of application (initial VC)
+        - Determines location in the event of immediate forecast query
+        - Displays bubble menu of saved forecast locations
+        - Status bar with hamburger menu and add forceast in the top right
+     
+     
+     */
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // MARK: - Properties
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var backgroundImageTwo: UIImageView!
-    @IBOutlet weak var cityTextField: UITextField!
+    // TODO: Build a loop animation that loops through our image dictionary and displays different backgrounds
     @IBOutlet weak var getWeatherBtn: UIButton!
+    fileprivate let locationManager = CLLocationManager()
+    
+    // MARK: - Setup
+    
+    fileprivate func setupVC() {
+        
+        /*
+            TODO: Refactor the code below, we wont have the button up/down scenario anymore, what will change, why does it need to change?
+         
+        // Handle the text field’s user input through delegate callbacks.
+        cityTextField.delegate = self
+        
+        // Add actions to UIButton
+        getWeatherBtn.addTarget(self, action: #selector(ForecastHomeViewController.buttonDown(_:)), for: .touchDown)
+        getWeatherBtn.addTarget(self, action: #selector(ForecastHomeViewController.buttonUp(_:)), for: [UIControlEvents.touchUpInside, UIControlEvents.touchUpOutside])
+        
+        // Disable UIButton on load
+        let text = cityTextField.text ?? ""
+        getWeatherBtn.isEnabled = !text.isEmpty
+        */
+ 
+        // New implementation
+        view.backgroundColor = .clear
+        
+    }
+    
+    fileprivate func setupLocationManager() {
+        // Set up location for use
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupLocationManager()
+        setupVC()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+   
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+    
+    
+    @IBOutlet weak var cityTextField: UITextField!
+   
+    
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -72,7 +95,7 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var feelsLabel: UILabel!
     
-    let locationManager = CLLocationManager()
+    
     
     let apiKey = "715c8dedd9cb08be"
     var isAnimated = false
@@ -103,92 +126,40 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Set up location for use
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        
-        // Handle the text field’s user input through delegate callbacks.
-        cityTextField.delegate = self
-        
-        // Add actions to UIButton
-        getWeatherBtn.addTarget(self, action: #selector(WeatherHomeViewController.buttonDown(_:)), for: .touchDown)
-        getWeatherBtn.addTarget(self, action: #selector(WeatherHomeViewController.buttonUp(_:)), for: [UIControlEvents.touchUpInside, UIControlEvents.touchUpOutside])
-        
-        // Disable UIButton on load
-        let text = cityTextField.text ?? ""
-        getWeatherBtn.isEnabled = !text.isEmpty
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        self.view.endEditing(true)
-        
-    }
     
     override func viewDidLayoutSubviews() {
         
         if isAnimated == true {
-            
             self.summaryLabel.center = CGPoint(x: self.summaryLabel.center.x, y: self.summaryLabel.center.y)
             self.tempLabel.center = CGPoint(x: self.tempLabel.center.x, y: self.tempLabel.center.y)
             self.humidityLabel.center = CGPoint(x: self.humidityLabel.center.x, y: self.humidityLabel.center.y)
             self.precipitationLabel.center = CGPoint(x: self.precipitationLabel.center.x, y: self.precipitationLabel.center.y)
             self.windLabel.center = CGPoint(x: self.windLabel.center.x, y: self.windLabel.center.y)
             self.feelsLabel.center = CGPoint(x: self.feelsLabel.center.x, y: self.feelsLabel.center.y)
-            
         } else {
-            
             summaryLabel.center = CGPoint(x: summaryLabel.center.x, y: summaryLabel.center.y - 75)
             tempLabel.center = CGPoint(x: tempLabel.center.x, y: tempLabel.center.y - 75)
             humidityLabel.center = CGPoint(x: humidityLabel.center.x, y: humidityLabel.center.y - 75)
             precipitationLabel.center = CGPoint(x: precipitationLabel.center.x, y: precipitationLabel.center.y - 75)
             windLabel.center = CGPoint(x: windLabel.center.x, y: windLabel.center.y - 75)
             feelsLabel.center = CGPoint(x: feelsLabel.center.x, y: feelsLabel.center.y - 75)
-            
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {        
-        textField.resignFirstResponder()
-        return true
-    }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidCityName()
-        
-    }
     
     func checkValidCityName() {
         let text = cityTextField.text ?? ""
         getWeatherBtn.isEnabled = !text.isEmpty
         if cityTextField.text == "" {
             getWeatherBtn.setTitle("", for: UIControlState())
-//            getWeatherBtn.backgroundColor = UIColor.clearColor()
-//            getWeatherBtn.layer.cornerRadius = 5
-//            getWeatherBtn.layer.borderWidth = 4
-//            getWeatherBtn.layer.borderColor = UIColor.whiteColor().CGColor
         } else {
             getWeatherBtn.setTitle("Hold For \nWeather", for: UIControlState())
             getWeatherBtn.titleLabel?.textAlignment = NSTextAlignment.center
-//            getWeatherBtn.backgroundColor = UIColor.clearColor()
-//            getWeatherBtn.layer.cornerRadius = 5
-//            getWeatherBtn.layer.borderWidth = 4
-//            getWeatherBtn.layer.borderColor = UIColor.whiteColor().CGColor
         }
     }
     
-    func weatherRequest() -> Bool {
+   /* func weatherRequest() -> Bool {
         
             self.tempLabel.text = ""
             //var wasSuccessful = false
@@ -318,9 +289,7 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
         if isAnimated == false {
             isAnimated = true
             UIView.animate(withDuration: 1.5, animations: { () -> Void in
-                
                 self.backgroundImageTwo.alpha = 1
-                
                 self.summaryLabel.alpha = 1
                 self.tempLabel.alpha = 1
                 self.humidityLabel.alpha = 1
@@ -344,11 +313,8 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
        checkValidCityName()
         if isAnimated == true {
             isAnimated = false
-            
             UIView.animate(withDuration: 2, animations: { () -> Void in
-                
                 self.backgroundImageTwo.alpha = 0
-                
             })
             backgroundImageTwo.image = nil
             summaryLabel.text = ""
@@ -381,8 +347,11 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
             
         }
     }
-    
-    // MARK: GeoLocation
+ */
+}
+
+// MARK: - CLLocationManagerDelegate
+extension ForecastHomeViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -413,16 +382,28 @@ class WeatherHomeViewController: UIViewController, UITextFieldDelegate, CLLocati
                     self.checkValidCityName()
                     
                     UIView.animate(withDuration: 1.5, animations: { () -> Void in
-                    
-                    self.cityTextField.alpha = 1
-                    self.getWeatherBtn.alpha = 1
-                        
+                        self.cityTextField.alpha = 1
+                        self.getWeatherBtn.alpha = 1
                     })
-                    
                 }
             }
         })
         locationManager.stopUpdatingLocation()
     }
-    // MARK: actions
+}
+
+// MARK: - UITextFieldDelegate
+extension ForecastHomeViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkValidCityName()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

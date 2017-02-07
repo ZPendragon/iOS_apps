@@ -9,10 +9,11 @@
 import Foundation
 typealias cityState = (String, String)
 
-final class WeatherFeedViewModel {
+final class ForecastFeedViewModel {
     
     // MARK: - Properties
     fileprivate let defaults = UserDefaults.standard
+    fileprivate var forecastReport: WeatherProfileCity?
     
     
     fileprivate func fetchWeather(_ query: cityState, completion: @escaping (WeatherProfileCity)->Void) {
@@ -37,6 +38,15 @@ final class WeatherFeedViewModel {
         let formattedQuery = url + state + "/" + city + ".json"
         
         return formattedQuery
+    }
+    
+    // MARK: - Network Request
+    
+    func requestForNetworkData(_ query: cityState, _ completion: @escaping ()-> Void) {
+        fetchWeather(query) { (forecastReport) in
+            self.forecastReport = forecastReport
+            completion()
+        }
     }
     
 }
