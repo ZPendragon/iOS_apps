@@ -27,6 +27,31 @@
 		358C978E1E499573003F024B /* ForcastFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C978D1E499573003F024B /* ForcastFeedViewModel.swift */; };
 		358C97921E4A0FF1003F024B /* ForecastTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C97911E4A0FF1003F024B /* ForecastTitle.swift */; };
 		359CB5821CBBF73100C3BF46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359CB5811CBBF73100C3BF46 /* CoreLocation.framework */; };
+		35D7182F1E4A38C9008350CF /* ForecastHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D7182E1E4A38C9008350CF /* ForecastHomeViewController.xib */; };
+		35DB01091E4A4E6F00F8497F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DB01081E4A4E6F00F8497F /* QuartzCore.framework */; };
+		35DB010B1E4A4E7900F8497F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DB010A1E4A4E7900F8497F /* CoreGraphics.framework */; };
+		35DB010D1E4A4EA500F8497F /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB010C1E4A4EA500F8497F /* HamburgerButton.swift */; };
+		35FA6C5B1E4AA2B2003C1CA8 /* LIVBubbleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C5A1E4AA2B2003C1CA8 /* LIVBubbleMenu.m */; };
+		35FA6C911E4AA2EC003C1CA8 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C601E4AA2EC003C1CA8 /* POPAnimatableProperty.mm */; };
+		35FA6C921E4AA2EC003C1CA8 /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C621E4AA2EC003C1CA8 /* POPAnimation.mm */; };
+		35FA6C931E4AA2EC003C1CA8 /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C641E4AA2EC003C1CA8 /* POPAnimationEvent.mm */; };
+		35FA6C941E4AA2EC003C1CA8 /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C671E4AA2EC003C1CA8 /* POPAnimationExtras.mm */; };
+		35FA6C951E4AA2EC003C1CA8 /* POPAnimationRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C6B1E4AA2EC003C1CA8 /* POPAnimationRuntime.mm */; };
+		35FA6C961E4AA2EC003C1CA8 /* POPAnimationTracer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C6D1E4AA2EC003C1CA8 /* POPAnimationTracer.mm */; };
+		35FA6C971E4AA2EC003C1CA8 /* POPAnimator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C701E4AA2EC003C1CA8 /* POPAnimator.mm */; };
+		35FA6C981E4AA2EC003C1CA8 /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C731E4AA2EC003C1CA8 /* POPBasicAnimation.mm */; };
+		35FA6C991E4AA2EC003C1CA8 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C761E4AA2EC003C1CA8 /* POPCGUtils.mm */; };
+		35FA6C9A1E4AA2EC003C1CA8 /* POPCustomAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C781E4AA2EC003C1CA8 /* POPCustomAnimation.mm */; };
+		35FA6C9B1E4AA2EC003C1CA8 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C7A1E4AA2EC003C1CA8 /* POPDecayAnimation.mm */; };
+		35FA6C9C1E4AA2EC003C1CA8 /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C7E1E4AA2EC003C1CA8 /* POPGeometry.mm */; };
+		35FA6C9D1E4AA2EC003C1CA8 /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C801E4AA2EC003C1CA8 /* POPLayerExtras.mm */; };
+		35FA6C9E1E4AA2EC003C1CA8 /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C821E4AA2EC003C1CA8 /* POPMath.mm */; };
+		35FA6C9F1E4AA2EC003C1CA8 /* POPPropertyAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C841E4AA2EC003C1CA8 /* POPPropertyAnimation.mm */; };
+		35FA6CA01E4AA2EC003C1CA8 /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C871E4AA2EC003C1CA8 /* POPSpringAnimation.mm */; };
+		35FA6CA11E4AA2EC003C1CA8 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C8B1E4AA2EC003C1CA8 /* POPVector.mm */; };
+		35FA6CA21E4AA2EC003C1CA8 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6C8E1E4AA2EC003C1CA8 /* TransformationMatrix.cpp */; };
+		35FA6CA41E4AC0C6003C1CA8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35FA6CA31E4AC0C6003C1CA8 /* CoreFoundation.framework */; };
+		A259BC3C280F7E568AC15F6B /* libPods-Climately.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82392E36D23B0DCFAFEC2FC1 /* libPods-Climately.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +77,70 @@
 		358C978D1E499573003F024B /* ForcastFeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastFeedViewModel.swift; sourceTree = "<group>"; };
 		358C97911E4A0FF1003F024B /* ForecastTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTitle.swift; sourceTree = "<group>"; };
 		359CB5811CBBF73100C3BF46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		35D2DD5B1E4A769000AE2994 /* libLIVBubbleMenu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLIVBubbleMenu.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/Climately-bonfnqhciiedjcenzbtllenrwpnu/Build/Products/Debug-iphonesimulator/LIVBubbleMenu/libLIVBubbleMenu.a"; sourceTree = "<group>"; };
+		35D2DD5D1E4A78CF00AE2994 /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "Pods/../build/Release-iphoneos/pop/libpop.a"; sourceTree = SOURCE_ROOT; };
+		35D2DD601E4A7CA400AE2994 /* LIVBubbleMenu-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LIVBubbleMenu-BridgingHeader.h"; sourceTree = "<group>"; };
+		35D7182E1E4A38C9008350CF /* ForecastHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastHomeViewController.xib; sourceTree = "<group>"; };
+		35DB01081E4A4E6F00F8497F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		35DB010A1E4A4E7900F8497F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35DB010C1E4A4EA500F8497F /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		35FA6C591E4AA2B2003C1CA8 /* LIVBubbleMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIVBubbleMenu.h; sourceTree = "<group>"; };
+		35FA6C5A1E4AA2B2003C1CA8 /* LIVBubbleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIVBubbleMenu.m; sourceTree = "<group>"; };
+		35FA6C5D1E4AA2EC003C1CA8 /* POP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POP.h; sourceTree = "<group>"; };
+		35FA6C5E1E4AA2EC003C1CA8 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
+		35FA6C5F1E4AA2EC003C1CA8 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
+		35FA6C601E4AA2EC003C1CA8 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		35FA6C611E4AA2EC003C1CA8 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimation.h; sourceTree = "<group>"; };
+		35FA6C621E4AA2EC003C1CA8 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimation.mm; sourceTree = "<group>"; };
+		35FA6C631E4AA2EC003C1CA8 /* POPAnimationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEvent.h; sourceTree = "<group>"; };
+		35FA6C641E4AA2EC003C1CA8 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationEvent.mm; sourceTree = "<group>"; };
+		35FA6C651E4AA2EC003C1CA8 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEventInternal.h; sourceTree = "<group>"; };
+		35FA6C661E4AA2EC003C1CA8 /* POPAnimationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationExtras.h; sourceTree = "<group>"; };
+		35FA6C671E4AA2EC003C1CA8 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationExtras.mm; sourceTree = "<group>"; };
+		35FA6C681E4AA2EC003C1CA8 /* POPAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationInternal.h; sourceTree = "<group>"; };
+		35FA6C691E4AA2EC003C1CA8 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationPrivate.h; sourceTree = "<group>"; };
+		35FA6C6A1E4AA2EC003C1CA8 /* POPAnimationRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationRuntime.h; sourceTree = "<group>"; };
+		35FA6C6B1E4AA2EC003C1CA8 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationRuntime.mm; sourceTree = "<group>"; };
+		35FA6C6C1E4AA2EC003C1CA8 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
+		35FA6C6D1E4AA2EC003C1CA8 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationTracer.mm; sourceTree = "<group>"; };
+		35FA6C6E1E4AA2EC003C1CA8 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracerInternal.h; sourceTree = "<group>"; };
+		35FA6C6F1E4AA2EC003C1CA8 /* POPAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimator.h; sourceTree = "<group>"; };
+		35FA6C701E4AA2EC003C1CA8 /* POPAnimator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimator.mm; sourceTree = "<group>"; };
+		35FA6C711E4AA2EC003C1CA8 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatorPrivate.h; sourceTree = "<group>"; };
+		35FA6C721E4AA2EC003C1CA8 /* POPBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBasicAnimation.h; sourceTree = "<group>"; };
+		35FA6C731E4AA2EC003C1CA8 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPBasicAnimation.mm; sourceTree = "<group>"; };
+		35FA6C741E4AA2EC003C1CA8 /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBasicAnimationInternal.h; sourceTree = "<group>"; };
+		35FA6C751E4AA2EC003C1CA8 /* POPCGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPCGUtils.h; sourceTree = "<group>"; };
+		35FA6C761E4AA2EC003C1CA8 /* POPCGUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPCGUtils.mm; sourceTree = "<group>"; };
+		35FA6C771E4AA2EC003C1CA8 /* POPCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPCustomAnimation.h; sourceTree = "<group>"; };
+		35FA6C781E4AA2EC003C1CA8 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPCustomAnimation.mm; sourceTree = "<group>"; };
+		35FA6C791E4AA2EC003C1CA8 /* POPDecayAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDecayAnimation.h; sourceTree = "<group>"; };
+		35FA6C7A1E4AA2EC003C1CA8 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPDecayAnimation.mm; sourceTree = "<group>"; };
+		35FA6C7B1E4AA2EC003C1CA8 /* POPDecayAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDecayAnimationInternal.h; sourceTree = "<group>"; };
+		35FA6C7C1E4AA2EC003C1CA8 /* POPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDefines.h; sourceTree = "<group>"; };
+		35FA6C7D1E4AA2EC003C1CA8 /* POPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPGeometry.h; sourceTree = "<group>"; };
+		35FA6C7E1E4AA2EC003C1CA8 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
+		35FA6C7F1E4AA2EC003C1CA8 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
+		35FA6C801E4AA2EC003C1CA8 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
+		35FA6C811E4AA2EC003C1CA8 /* POPMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPMath.h; sourceTree = "<group>"; };
+		35FA6C821E4AA2EC003C1CA8 /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPMath.mm; sourceTree = "<group>"; };
+		35FA6C831E4AA2EC003C1CA8 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPropertyAnimation.h; sourceTree = "<group>"; };
+		35FA6C841E4AA2EC003C1CA8 /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPPropertyAnimation.mm; sourceTree = "<group>"; };
+		35FA6C851E4AA2EC003C1CA8 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
+		35FA6C861E4AA2EC003C1CA8 /* POPSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimation.h; sourceTree = "<group>"; };
+		35FA6C871E4AA2EC003C1CA8 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPSpringAnimation.mm; sourceTree = "<group>"; };
+		35FA6C881E4AA2EC003C1CA8 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
+		35FA6C891E4AA2EC003C1CA8 /* POPSpringSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringSolver.h; sourceTree = "<group>"; };
+		35FA6C8A1E4AA2EC003C1CA8 /* POPVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPVector.h; sourceTree = "<group>"; };
+		35FA6C8B1E4AA2EC003C1CA8 /* POPVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPVector.mm; sourceTree = "<group>"; };
+		35FA6C8D1E4AA2EC003C1CA8 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatConversion.h; sourceTree = "<group>"; };
+		35FA6C8E1E4AA2EC003C1CA8 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
+		35FA6C8F1E4AA2EC003C1CA8 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
+		35FA6C901E4AA2EC003C1CA8 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
+		35FA6CA31E4AC0C6003C1CA8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6671DF1A33A38EE4F6496FEA /* Pods-Climately.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climately.release.xcconfig"; path = "Pods/Target Support Files/Pods-Climately/Pods-Climately.release.xcconfig"; sourceTree = "<group>"; };
+		82392E36D23B0DCFAFEC2FC1 /* libPods-Climately.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Climately.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A1D9F57C0EEF46B2FE1DE4 /* Pods-Climately.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climately.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Climately/Pods-Climately.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +148,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FA6CA41E4AC0C6003C1CA8 /* CoreFoundation.framework in Frameworks */,
+				35DB010B1E4A4E7900F8497F /* CoreGraphics.framework in Frameworks */,
+				35DB01091E4A4E6F00F8497F /* QuartzCore.framework in Frameworks */,
 				359CB5821CBBF73100C3BF46 /* CoreLocation.framework in Frameworks */,
+				A259BC3C280F7E568AC15F6B /* libPods-Climately.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +162,6 @@
 		35719FDB1CA99B5D00B81B8D = {
 			isa = PBXGroup;
 			children = (
-				359CB5811CBBF73100C3BF46 /* CoreLocation.framework */,
 				35719FE61CA99B5D00B81B8D /* Climately */,
 				358C97711E4952A3003F024B /* ClimatelyTests */,
 				35719FE51CA99B5D00B81B8D /* Products */,
@@ -101,6 +193,7 @@
 				358C976A1E49513A003F024B /* Constants */,
 				358C97721E4952C8003F024B /* Resources */,
 				35C6F0BD1E36BA9800F3435D /* Supporting Files */,
+				35D2DD601E4A7CA400AE2994 /* LIVBubbleMenu-BridgingHeader.h */,
 			);
 			path = Climately;
 			sourceTree = "<group>";
@@ -108,6 +201,8 @@
 		358C97681E49512F003F024B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35FA6C581E4AA2B2003C1CA8 /* LIVBubbleMenu */,
+				35DB010C1E4A4EA500F8497F /* HamburgerButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -161,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				35719FE91CA99B5D00B81B8D /* ForecastHomeViewController.swift */,
+				35D7182E1E4A38C9008350CF /* ForecastHomeViewController.xib */,
 				358C97781E49594B003F024B /* ForecastFeedViewController.swift */,
 			);
 			name = Weather;
@@ -195,6 +291,8 @@
 		358C97731E49533B003F024B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E6A1D9F57C0EEF46B2FE1DE4 /* Pods-Climately.debug.xcconfig */,
+				6671DF1A33A38EE4F6496FEA /* Pods-Climately.release.xcconfig */,
 			);
 			name = Pods;
 			path = Climately;
@@ -203,6 +301,13 @@
 		358C97741E495347003F024B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35FA6CA31E4AC0C6003C1CA8 /* CoreFoundation.framework */,
+				35D2DD5D1E4A78CF00AE2994 /* libpop.a */,
+				35D2DD5B1E4A769000AE2994 /* libLIVBubbleMenu.a */,
+				35DB010A1E4A4E7900F8497F /* CoreGraphics.framework */,
+				35DB01081E4A4E6F00F8497F /* QuartzCore.framework */,
+				359CB5811CBBF73100C3BF46 /* CoreLocation.framework */,
+				82392E36D23B0DCFAFEC2FC1 /* libPods-Climately.a */,
 			);
 			name = Frameworks;
 			path = Climately;
@@ -228,8 +333,84 @@
 		35C6F0BD1E36BA9800F3435D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				35FA6C5C1E4AA2EC003C1CA8 /* pop */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35FA6C581E4AA2B2003C1CA8 /* LIVBubbleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				35FA6C591E4AA2B2003C1CA8 /* LIVBubbleMenu.h */,
+				35FA6C5A1E4AA2B2003C1CA8 /* LIVBubbleMenu.m */,
+			);
+			path = LIVBubbleMenu;
+			sourceTree = "<group>";
+		};
+		35FA6C5C1E4AA2EC003C1CA8 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				35FA6C5D1E4AA2EC003C1CA8 /* POP.h */,
+				35FA6C5E1E4AA2EC003C1CA8 /* POPAction.h */,
+				35FA6C5F1E4AA2EC003C1CA8 /* POPAnimatableProperty.h */,
+				35FA6C601E4AA2EC003C1CA8 /* POPAnimatableProperty.mm */,
+				35FA6C611E4AA2EC003C1CA8 /* POPAnimation.h */,
+				35FA6C621E4AA2EC003C1CA8 /* POPAnimation.mm */,
+				35FA6C631E4AA2EC003C1CA8 /* POPAnimationEvent.h */,
+				35FA6C641E4AA2EC003C1CA8 /* POPAnimationEvent.mm */,
+				35FA6C651E4AA2EC003C1CA8 /* POPAnimationEventInternal.h */,
+				35FA6C661E4AA2EC003C1CA8 /* POPAnimationExtras.h */,
+				35FA6C671E4AA2EC003C1CA8 /* POPAnimationExtras.mm */,
+				35FA6C681E4AA2EC003C1CA8 /* POPAnimationInternal.h */,
+				35FA6C691E4AA2EC003C1CA8 /* POPAnimationPrivate.h */,
+				35FA6C6A1E4AA2EC003C1CA8 /* POPAnimationRuntime.h */,
+				35FA6C6B1E4AA2EC003C1CA8 /* POPAnimationRuntime.mm */,
+				35FA6C6C1E4AA2EC003C1CA8 /* POPAnimationTracer.h */,
+				35FA6C6D1E4AA2EC003C1CA8 /* POPAnimationTracer.mm */,
+				35FA6C6E1E4AA2EC003C1CA8 /* POPAnimationTracerInternal.h */,
+				35FA6C6F1E4AA2EC003C1CA8 /* POPAnimator.h */,
+				35FA6C701E4AA2EC003C1CA8 /* POPAnimator.mm */,
+				35FA6C711E4AA2EC003C1CA8 /* POPAnimatorPrivate.h */,
+				35FA6C721E4AA2EC003C1CA8 /* POPBasicAnimation.h */,
+				35FA6C731E4AA2EC003C1CA8 /* POPBasicAnimation.mm */,
+				35FA6C741E4AA2EC003C1CA8 /* POPBasicAnimationInternal.h */,
+				35FA6C751E4AA2EC003C1CA8 /* POPCGUtils.h */,
+				35FA6C761E4AA2EC003C1CA8 /* POPCGUtils.mm */,
+				35FA6C771E4AA2EC003C1CA8 /* POPCustomAnimation.h */,
+				35FA6C781E4AA2EC003C1CA8 /* POPCustomAnimation.mm */,
+				35FA6C791E4AA2EC003C1CA8 /* POPDecayAnimation.h */,
+				35FA6C7A1E4AA2EC003C1CA8 /* POPDecayAnimation.mm */,
+				35FA6C7B1E4AA2EC003C1CA8 /* POPDecayAnimationInternal.h */,
+				35FA6C7C1E4AA2EC003C1CA8 /* POPDefines.h */,
+				35FA6C7D1E4AA2EC003C1CA8 /* POPGeometry.h */,
+				35FA6C7E1E4AA2EC003C1CA8 /* POPGeometry.mm */,
+				35FA6C7F1E4AA2EC003C1CA8 /* POPLayerExtras.h */,
+				35FA6C801E4AA2EC003C1CA8 /* POPLayerExtras.mm */,
+				35FA6C811E4AA2EC003C1CA8 /* POPMath.h */,
+				35FA6C821E4AA2EC003C1CA8 /* POPMath.mm */,
+				35FA6C831E4AA2EC003C1CA8 /* POPPropertyAnimation.h */,
+				35FA6C841E4AA2EC003C1CA8 /* POPPropertyAnimation.mm */,
+				35FA6C851E4AA2EC003C1CA8 /* POPPropertyAnimationInternal.h */,
+				35FA6C861E4AA2EC003C1CA8 /* POPSpringAnimation.h */,
+				35FA6C871E4AA2EC003C1CA8 /* POPSpringAnimation.mm */,
+				35FA6C881E4AA2EC003C1CA8 /* POPSpringAnimationInternal.h */,
+				35FA6C891E4AA2EC003C1CA8 /* POPSpringSolver.h */,
+				35FA6C8A1E4AA2EC003C1CA8 /* POPVector.h */,
+				35FA6C8B1E4AA2EC003C1CA8 /* POPVector.mm */,
+				35FA6C8C1E4AA2EC003C1CA8 /* WebCore */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+		35FA6C8C1E4AA2EC003C1CA8 /* WebCore */ = {
+			isa = PBXGroup;
+			children = (
+				35FA6C8D1E4AA2EC003C1CA8 /* FloatConversion.h */,
+				35FA6C8E1E4AA2EC003C1CA8 /* TransformationMatrix.cpp */,
+				35FA6C8F1E4AA2EC003C1CA8 /* TransformationMatrix.h */,
+				35FA6C901E4AA2EC003C1CA8 /* UnitBezier.h */,
+			);
+			path = WebCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,9 +420,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35719FF91CA99B5D00B81B8D /* Build configuration list for PBXNativeTarget "Climately" */;
 			buildPhases = (
+				9BD673EFD4BE96D8FBACDCFF /* [CP] Check Pods Manifest.lock */,
 				35719FE01CA99B5D00B81B8D /* Sources */,
 				35719FE11CA99B5D00B81B8D /* Frameworks */,
 				35719FE21CA99B5D00B81B8D /* Resources */,
+				334E6CF5964CE34ABDA390B0 /* [CP] Embed Pods Frameworks */,
+				04436073480B7DDF15958423 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,7 +443,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Kevin Zeckser";
 				TargetAttributes = {
 					35719FE31CA99B5D00B81B8D = {
@@ -296,10 +480,59 @@
 				35719FF51CA99B5D00B81B8D /* LaunchScreen.storyboard in Resources */,
 				3571A0531CA9BB4200B81B8D /* Assets.xcassets in Resources */,
 				35719FED1CA99B5D00B81B8D /* Main.storyboard in Resources */,
+				35D7182F1E4A38C9008350CF /* ForecastHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04436073480B7DDF15958423 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Climately/Pods-Climately-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		334E6CF5964CE34ABDA390B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Climately/Pods-Climately-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD673EFD4BE96D8FBACDCFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35719FE01CA99B5D00B81B8D /* Sources */ = {
@@ -307,19 +540,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				358C97861E499028003F024B /* Network.swift in Sources */,
+				35FA6C951E4AA2EC003C1CA8 /* POPAnimationRuntime.mm in Sources */,
+				35FA6CA01E4AA2EC003C1CA8 /* POPSpringAnimation.mm in Sources */,
+				35FA6C9C1E4AA2EC003C1CA8 /* POPGeometry.mm in Sources */,
+				35FA6C931E4AA2EC003C1CA8 /* POPAnimationEvent.mm in Sources */,
 				358C97771E49589F003F024B /* LocationRequestManager.swift in Sources */,
+				35FA6C941E4AA2EC003C1CA8 /* POPAnimationExtras.mm in Sources */,
+				35FA6C911E4AA2EC003C1CA8 /* POPAnimatableProperty.mm in Sources */,
+				35FA6C921E4AA2EC003C1CA8 /* POPAnimation.mm in Sources */,
 				358C97921E4A0FF1003F024B /* ForecastTitle.swift in Sources */,
+				35FA6C9A1E4AA2EC003C1CA8 /* POPCustomAnimation.mm in Sources */,
+				35FA6C9B1E4AA2EC003C1CA8 /* POPDecayAnimation.mm in Sources */,
 				35719FF01CA99B5D00B81B8D /* Climately.xcdatamodeld in Sources */,
 				358C977D1E495BF4003F024B /* WeatherProfile.swift in Sources */,
+				35FA6CA21E4AA2EC003C1CA8 /* TransformationMatrix.cpp in Sources */,
+				35FA6C981E4AA2EC003C1CA8 /* POPBasicAnimation.mm in Sources */,
 				358C977B1E495B65003F024B /* WeatherImage.swift in Sources */,
 				358C978A1E49904C003F024B /* NetworkProvider.swift in Sources */,
 				358C978C1E49916C003F024B /* WeatherFetching.swift in Sources */,
 				358C978E1E499573003F024B /* ForcastFeedViewModel.swift in Sources */,
+				35DB010D1E4A4EA500F8497F /* HamburgerButton.swift in Sources */,
+				35FA6C9F1E4AA2EC003C1CA8 /* POPPropertyAnimation.mm in Sources */,
 				358C97841E498B82003F024B /* Location.swift in Sources */,
+				35FA6C971E4AA2EC003C1CA8 /* POPAnimator.mm in Sources */,
 				358C97791E49594B003F024B /* ForecastFeedViewController.swift in Sources */,
+				35FA6CA11E4AA2EC003C1CA8 /* POPVector.mm in Sources */,
+				35FA6C9D1E4AA2EC003C1CA8 /* POPLayerExtras.mm in Sources */,
 				35719FEA1CA99B5D00B81B8D /* ForecastHomeViewController.swift in Sources */,
 				358C97881E499035003F024B /* NetworkRequest.swift in Sources */,
 				358C97801E49632B003F024B /* WeatherProfileViewModel.swift in Sources */,
+				35FA6C961E4AA2EC003C1CA8 /* POPAnimationTracer.mm in Sources */,
+				35FA6C9E1E4AA2EC003C1CA8 /* POPMath.mm in Sources */,
+				35FA6C991E4AA2EC003C1CA8 /* POPCGUtils.mm in Sources */,
+				35FA6C5B1E4AA2B2003C1CA8 /* LIVBubbleMenu.m in Sources */,
 				35719FE81CA99B5D00B81B8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,8 +612,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -383,10 +638,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(inherited)",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -403,8 +666,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -421,32 +686,56 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(inherited)",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
 		35719FFA1CA99B5D00B81B8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A1D9F57C0EEF46B2FE1DE4 /* Pods-Climately.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Climately/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/pop",
+				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KZ.Climately;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Climately/LIVBubbleMenu-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		35719FFB1CA99B5D00B81B8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6671DF1A33A38EE4F6496FEA /* Pods-Climately.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Climately/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/pop",
+				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KZ.Climately;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Climately/LIVBubbleMenu-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

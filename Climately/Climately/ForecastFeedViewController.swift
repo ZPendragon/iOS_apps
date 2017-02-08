@@ -7,7 +7,6 @@
 //
 
 import UIKit
-typealias cityState = (String, String)
 
 final class ForecastFeedViewController: UIViewController {
     
@@ -22,14 +21,15 @@ final class ForecastFeedViewController: UIViewController {
     // MARK: - Properties
     
     fileprivate var forcastFeedViewModel = ForecastFeedViewModel()
-    fileprivate var searchQuery: cityState = ("","")
+    var searchQuery: cityState?
     
     // MARK: - Setup
     
     fileprivate func initiateNetworkRequest() {
+        guard let searchQuery = searchQuery else { return }
         forcastFeedViewModel.requestForNetworkData(searchQuery) {
-            self.delegate?.didRecieveNetworkResponse(self)
-            self.collectionView.reloaddata()
+            //self.delegate?.didRecieveNetworkResponse(self)
+            //self.collectionView.reloaddata()
         }
     }
     
