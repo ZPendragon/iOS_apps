@@ -39,11 +39,12 @@ class ForecastHomeViewController: UIViewController {
                                                   ("Boston","MA"),
                                                   ("Boston","MA")]
     fileprivate var selectedIndex: Int?
+    fileprivate var menuButton: HamburgerButton?
+    
     // MARK: - Setup
     
     fileprivate func setupVC() {
-        
-        view.backgroundColor = .clear
+        self.backgroundImage = UIImageView(image: UIImage(named: "background_1"))
     }
     
     fileprivate func setupBubbleMenu() {
@@ -64,31 +65,51 @@ class ForecastHomeViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
+    fileprivate func setupNavigationBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.menuButton = HamburgerButton(frame: CGRect(x: 0, y: 0, width: 54, height: 54))
+        menuButton?.addTarget(self, action: #selector(ForecastHomeViewController.toggle(_:)), for:.touchUpInside)
+        let leftMenuButton: UIBarButtonItem = UIBarButtonItem(customView: self.menuButton!)
+        navigationItem.leftBarButtonItem = leftMenuButton
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationManager()
         setupVC()
+        setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupVC()
     }
+    
+    // MARK: - Actions
     
     @IBAction func showButton(_ sender: Any) {
         setupBubbleMenu()
     }
     
+    func toggle(_ sender: AnyObject!) {
+        guard let showsMenu = self.menuButton?.showsMenu else {return}
+        self.menuButton?.showsMenu = !showsMenu
+        
+        // Modal With enter a city / state
+        
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            let nav = segue.destination as? UINavigationController
-            let destinationController = nav?.topViewController as? ForecastFeedViewController
+        if segue.identifier == "showForecast" {
+
+            let destinationController = segue.destination as? ForecastFeedViewController
             guard let index = self.selectedIndex else { return }
+            destinationController?.navigationItem.title = testCityState[index].0
             destinationController?.searchQuery = testCityState[index]
-            
         }
     }
 }
@@ -110,10 +131,10 @@ extension ForecastHomeViewController: CLLocationManagerDelegate {
                 if placemark.isoCountryCode == "US" {
                     
                     if placemark.locality != nil {
-                        print("City \(placemark.locality)")
+                        //print("City \(placemark.locality)")
                     }
                     if placemark.administrativeArea != nil {
-                        print(placemark.administrativeArea)
+                        //print(placemark.administrativeArea)
                     }
                 }
             }
@@ -127,13 +148,13 @@ extension ForecastHomeViewController: CLLocationManagerDelegate {
 extension ForecastHomeViewController: LIVBubbleButtonDelegate {
     
     func livBubbleMenu(_ bubbleMenu: LIVBubbleMenu!, tappedBubbleWith index: UInt) {
-        print("User has selected bubble index: \(index)")
+        //print("User has selected bubble index: \(index)")
         selectedIndex = Int(index)
-        performSegue(withIdentifier: "showDetail", sender: UIButton.self)
+        performSegue(withIdentifier: "showForecast", sender: UIButton.self)
     }
     
     func livBubbleMenuDidHide(_ bubbleMenu: LIVBubbleMenu!) {
-        print("LIVBubbleMenu has been hidden")
+        //print("LIVBubbleMenu has been hidden")
     }
 }
 

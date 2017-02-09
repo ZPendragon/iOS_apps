@@ -10,6 +10,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Forecast Feed View Controller-->
+        <scene sceneID="JHe-Gk-gLd">
+            <objects>
+                <collectionViewController id="Jq9-yI-k17" customClass="ForecastFeedViewController" customModule="Climately" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hRz-fO-gc7" userLabel="Forecast Collection">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="tJL-wq-Cy4" customClass="WeeklyvisualLayout" customModule="Climately" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ForecastCell" id="pbk-P7-7IP" customClass="ForecastCell" customModule="Climately" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="279"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23L-fG-kVj">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="280"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="280" id="7iU-yL-x4B"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-TS-sJA" userLabel="Cover View">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="280"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wednesday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZj-dv-G4s">
+                                                    <rect key="frame" x="0.0" y="117" width="374" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="38"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="iCk-TS-sJA" firstAttribute="trailing" secondItem="23L-fG-kVj" secondAttribute="trailing" id="90T-nu-g6e"/>
+                                    <constraint firstItem="iCk-TS-sJA" firstAttribute="bottom" secondItem="23L-fG-kVj" secondAttribute="bottom" id="ElB-pd-TFd"/>
+                                    <constraint firstItem="23L-fG-kVj" firstAttribute="leading" secondItem="pbk-P7-7IP" secondAttribute="leading" id="bHp-ZX-EyL"/>
+                                    <constraint firstItem="23L-fG-kVj" firstAttribute="centerY" secondItem="pbk-P7-7IP" secondAttribute="centerY" id="g9J-2c-M1d"/>
+                                    <constraint firstAttribute="trailing" secondItem="23L-fG-kVj" secondAttribute="trailing" id="hAb-Ny-ovb"/>
+                                    <constraint firstItem="iCk-TS-sJA" firstAttribute="leading" secondItem="23L-fG-kVj" secondAttribute="leading" id="ms7-lL-YTD"/>
+                                    <constraint firstItem="iCk-TS-sJA" firstAttribute="top" secondItem="23L-fG-kVj" secondAttribute="top" id="xLD-MY-R9i"/>
+                                </constraints>
+                                <size key="customSize" width="374" height="279"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="ZZj-dv-G4s" id="84H-Xd-mrf"/>
+                                    <outlet property="imageCoverView" destination="iCk-TS-sJA" id="TjO-Za-eeB"/>
+                                    <outlet property="imageView" destination="23L-fG-kVj" id="Cf9-GW-rFI"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Jq9-yI-k17" id="xpI-N3-Pfk"/>
+                            <outlet property="delegate" destination="Jq9-yI-k17" id="cgo-V5-42a"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgM-Vd-5r3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2336.8000000000002" y="465.51724137931041"/>
+        </scene>
         <!--Forecast Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,17 +87,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-df-blL">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8N-5Z-U4m">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-RE-hnC">
-                                <rect key="frame" x="113" y="269" width="149" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-df-blL">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-RE-hnC">
+                                <rect key="frame" x="150" y="296" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Menu">
+                                <state key="normal" image="sunny_day">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -53,48 +118,19 @@
                         <outlet property="backgroundImage" destination="t4F-df-blL" id="Zmn-ae-ilL"/>
                         <outlet property="backgroundImageTwo" destination="J8N-5Z-U4m" id="ztn-jQ-lKc"/>
                         <outlet property="cityMenuButton" destination="Xas-RE-hnC" id="A4W-wx-A9n"/>
-                        <segue destination="xts-uQ-C8Y" kind="show" identifier="showDetail" id="bUJ-GS-hmG"/>
+                        <segue destination="Jq9-yI-k17" kind="show" identifier="showForecast" id="TJz-s8-6rW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1463.2" y="467.3163418290855"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="88p-Pp-YSp">
-            <objects>
-                <tableViewController id="xts-uQ-C8Y" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RY7-79-vjm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" id="1Sg-sc-egN">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Sg-sc-egN" id="arG-He-QGK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="xts-uQ-C8Y" id="voz-rU-Dxj"/>
-                            <outlet property="delegate" destination="xts-uQ-C8Y" id="2K3-O0-rMb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="shU-IB-Hs4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ogK-cn-NOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3116" y="466.41679160419795"/>
+            <point key="canvasLocation" x="1426" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MlY-lS-jzX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T5W-nK-Js3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="70T-A8-1Uk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="70T-A8-1Uk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -108,4 +144,8 @@
             <point key="canvasLocation" x="524" y="467.3163418290855"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_1" width="1080" height="1920"/>
+        <image name="sunny_day" width="105" height="104"/>
+    </resources>
 </document>

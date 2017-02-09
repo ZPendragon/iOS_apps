@@ -1,5 +1,5 @@
 //
-//  WeatherFeedViewModel.swift
+//  ForecastFeedViewModel.swift
 //  Climately
 //
 //  Created by Kevin Zeckser on 2/7/17.
@@ -13,10 +13,10 @@ final class ForecastFeedViewModel {
     
     // MARK: - Properties
     fileprivate let defaults = UserDefaults.standard
-    fileprivate var forecastReport: WeatherProfileCity?
+    fileprivate var forecast: Forecast?
     
     
-    fileprivate func fetchWeather(_ query: cityState, completion: @escaping (WeatherProfileCity)->Void) {
+    fileprivate func fetchWeather(_ query: cityState, completion: @escaping (Forecast)->Void) {
         let weatherClient = WeatherClient()
         let url = formatURLWithQuery(query, url: WeatherClient.url())
         let networkProvider = NetworkProvider()
@@ -24,7 +24,7 @@ final class ForecastFeedViewModel {
         
         networkProvider.makeRequestForData(request, success: { (data) in
             if let json = weatherClient.jsonForData(data) {
-                let weatherProfile = WeatherProfileCity(fromDictionary: json)
+                let weatherProfile = Forecast(fromDictionary: json)
                 completion(weatherProfile!)
             }
         }) {(error) in
@@ -43,8 +43,8 @@ final class ForecastFeedViewModel {
     // MARK: - Network Request
     
     func requestForNetworkData(_ query: cityState, _ completion: @escaping ()-> Void) {
-        fetchWeather(query) { (forecastReport) in
-            self.forecastReport = forecastReport
+        fetchWeather(query) { (forecast) in
+            self.forecast = forecast
             completion()
         }
     }

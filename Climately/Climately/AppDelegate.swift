@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = ForecastHomeViewController()
         window.rootViewController = rootViewController
         */
-        configureStatusBarAppearence()
+        configureStatusBarAppearance()
+        configureNavigationBarAppearance()
         return true
     }
 
@@ -111,8 +112,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    func configureStatusBarAppearence() {
+    func configureStatusBarAppearance() {
         UIApplication.shared.statusBarStyle = .lightContent
+    }
+    func configureNavigationBarAppearance() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
     }
 }
 
