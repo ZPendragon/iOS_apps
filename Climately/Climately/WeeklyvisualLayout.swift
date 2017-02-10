@@ -111,13 +111,6 @@ class WeeklyvisualLayout: UICollectionViewLayout {
     
     /* Return all attributes in the cache whose frame intersects with the rect passed to the method */
     
-    
-    
-    // MARK: - TEMP FUNCTION TO RESOLVE CRASHES
-//    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-//        return cache[indexPath.item]
-//    }
-    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         for attributes in cache {

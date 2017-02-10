@@ -52,6 +52,7 @@
 		35FA6CAA1E4BDBAB003C1CA8 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6CA91E4BDBAB003C1CA8 /* ForecastCell.swift */; };
 		35FA6CAD1E4BDCB6003C1CA8 /* WeeklyvisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6CAC1E4BDCB6003C1CA8 /* WeeklyvisualLayout.swift */; };
 		35FA6CAF1E4C1779003C1CA8 /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6CAE1E4C1779003C1CA8 /* ViewModelConfigurable.swift */; };
+		35FA6CB11E4D4EF1003C1CA8 /* ForecastHomeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6CB01E4D4EF1003C1CA8 /* ForecastHomeModalViewController.swift */; };
 		A259BC3C280F7E568AC15F6B /* libPods-Climately.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82392E36D23B0DCFAFEC2FC1 /* libPods-Climately.a */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		35FA6CA91E4BDBAB003C1CA8 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		35FA6CAC1E4BDCB6003C1CA8 /* WeeklyvisualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyvisualLayout.swift; sourceTree = "<group>"; };
 		35FA6CAE1E4C1779003C1CA8 /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
+		35FA6CB01E4D4EF1003C1CA8 /* ForecastHomeModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastHomeModalViewController.swift; sourceTree = "<group>"; };
 		6671DF1A33A38EE4F6496FEA /* Pods-Climately.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climately.release.xcconfig"; path = "Pods/Target Support Files/Pods-Climately/Pods-Climately.release.xcconfig"; sourceTree = "<group>"; };
 		82392E36D23B0DCFAFEC2FC1 /* libPods-Climately.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Climately.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A1D9F57C0EEF46B2FE1DE4 /* Pods-Climately.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climately.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Climately/Pods-Climately.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				35719FE91CA99B5D00B81B8D /* ForecastHomeViewController.swift */,
+				35FA6CB01E4D4EF1003C1CA8 /* ForecastHomeModalViewController.swift */,
 				358C97781E49594B003F024B /* ForecastFeedViewController.swift */,
 			);
 			name = Weather;
@@ -589,6 +592,7 @@
 				35FA6CAA1E4BDBAB003C1CA8 /* ForecastCell.swift in Sources */,
 				35FA6C9F1E4AA2EC003C1CA8 /* POPPropertyAnimation.mm in Sources */,
 				358C97841E498B82003F024B /* Location.swift in Sources */,
+				35FA6CB11E4D4EF1003C1CA8 /* ForecastHomeModalViewController.swift in Sources */,
 				35FA6CAD1E4BDCB6003C1CA8 /* WeeklyvisualLayout.swift in Sources */,
 				35FA6C971E4AA2EC003C1CA8 /* POPAnimator.mm in Sources */,
 				358C97791E49594B003F024B /* ForecastFeedViewController.swift in Sources */,

@@ -12,30 +12,22 @@ class ForecastCell: UICollectionViewCell {
     
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageCoverView: UIView!
+    @IBOutlet private weak var imageCoverView: UIView!
+    @IBOutlet private weak var imageIconView: UIImageView!
+    @IBOutlet private weak var imagePrecipitationIcon: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet private weak var temperatureLabel: UILabel!
     @IBOutlet private weak var windLabel: UILabel!
-    
-    
-    
-    
-    
-    
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var precipitationLabel: UILabel!
+
     var forecast: ForecastViewModel? {
         didSet {
             if let forecast = forecast {
-                
-//                imageView.image = testImages[randomInt(max: 4)]
-               // imageView.image = testImages[1]
-                
-                dateLabel.text = forecast.currentObservation
-                
-                 /*
-                titleLabel.text = inspiration.title
-                timeAndRoomLabel.text = inspiration.roomAndTime
-                speakerLabel.text = inspiration.speaker
-                */
+                //dateLabel.text = forecast.date
+                temperatureLabel.text = forecast.currentTemperature
+                windLabel.text = forecast.windSpeed
+                descriptionLabel.text = forecast.currentObservation
             }
         }
     }
@@ -43,21 +35,28 @@ class ForecastCell: UICollectionViewCell {
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         
-        // 1
         let standardHeight = WeeklyvisualLayoutConstants.Cell.standardHeight
         let featuredHeight = WeeklyvisualLayoutConstants.Cell.featuredHeight
         
-        // 2
         let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
-        
-        // 3
-        let minAlpha: CGFloat = 0.3
-        let maxAlpha: CGFloat = 0.75
+        let minAlpha: CGFloat = 0.4
+        let maxAlpha: CGFloat = 0.80
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+
         
-        let scale = max(delta, 0.5)
-//        titleLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
-//        timeAndRoomLabel.alpha = delta
-//        speakerLabel.alpha = delta
+        let scale = max(delta, 0.4)
+        dateLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        dateLabel.alpha = delta
+        
+        temperatureLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
+        windLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        windLabel.alpha = delta
+        
+        descriptionLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        descriptionLabel.alpha = delta
+        
+        precipitationLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        precipitationLabel.alpha = delta
     }
 }

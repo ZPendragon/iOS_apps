@@ -27,7 +27,8 @@ final class ForecastFeedViewController: UICollectionViewController {
     // MARK: - Sample Values
     fileprivate var sampleForecaseViewModel: ForecastViewModel?
     fileprivate var sampleForecast: Forecast?
-    let sampleWeek = ["Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday"]
+    fileprivate var sampleWeek = ["Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday"]
+    fileprivate var animationType = "RightToLeft"
     fileprivate let sampleJSON = ["city": "Boston",
                                   "weather": "Partly Cloudy",
                                   "temp_f": 66,
@@ -38,24 +39,35 @@ final class ForecastFeedViewController: UICollectionViewController {
                                   "wind_mph": 22.0,
                                   "temp_c": 19,
                                   "feelslike_c": "19.1"] as [String : Any]
-    fileprivate let testImages: [UIImage] = [UIImage(named: "weather_dark_cloudy")!,
-                                             UIImage(named: "weather_dark_rainy")!,
-                                             UIImage(named: "weather_light_clear")!,
-                                             UIImage(named: "weather_light_cloudy")!]
+    fileprivate let testImages: [UIImage] = [UIImage(named: "background_0")!,
+                                             UIImage(named: "background_1")!,
+                                             UIImage(named: "background_2")!,
+                                             UIImage(named: "background_4")!,
+                                             UIImage(named: "background_3")!,
+                                             UIImage(named: "background_5")!,
+                                             UIImage(named: "background_7")!,
+                                             UIImage(named: "background_9")!,
+                                             UIImage(named: "background_10")!]
     // MARK: - TEMP
     func randomInt(max:Int) -> Int {
-        return Int(arc4random_uniform(UInt32(max + 1)))
+//        return Int(arc4random_uniform(UInt32(max + 1)))
+        return Int(arc4random_uniform(UInt32(max)))
     }
     func setupSamples() {
-        sampleForecast = Forecast(fromDictionary: sampleJSON as [String : AnyObject])
-        sampleForecaseViewModel = ForecastViewModel(forecast: sampleForecast!)
-        forecasts = [sampleForecaseViewModel!,
-                     sampleForecaseViewModel!,
-                     sampleForecaseViewModel!,
-                     sampleForecaseViewModel!,
-                     sampleForecaseViewModel!,
-                     sampleForecaseViewModel!,
-                     sampleForecaseViewModel!]
+//        sampleForecast = Forecast(fromDictionary: sampleJSON as [String : AnyObject])
+//        sampleForecaseViewModel = ForecastViewModel(forecast: sampleForecast!)
+//        forecasts = [sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!,
+//                     sampleForecaseViewModel!]
+        var n = 0
+        repeat {
+            sampleWeek += sampleWeek
+            n += 1
+        } while n < 5
     }
     
     
@@ -97,7 +109,7 @@ final class ForecastFeedViewController: UICollectionViewController {
         setupVC()
         setupCollectionView()
         setupNavigationBar()
-        //setupSamples()
+        setupSamples()
     }
     
     
@@ -111,7 +123,7 @@ extension ForecastFeedViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return sampleWeek.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -119,7 +131,7 @@ extension ForecastFeedViewController {
         let forcast = forecasts?[indexPath.item]
         cell.forecast = forecasts?[indexPath.item]
         cell.dateLabel.text = sampleWeek[indexPath.row]
-        cell.imageView.image = testImages[randomInt(max: 3)]
+        cell.imageView.image = testImages[randomInt(max: 9)]
         return cell
     }
     
@@ -131,4 +143,40 @@ extension ForecastFeedViewController {
         }
     }
     
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if (animationType == "BottomToTop") {
+            let cellContentView: UIView? = cell.contentView
+            let rotationAngleDegrees: CGFloat = -30
+            let rotationAngleRadians: CGFloat = rotationAngleDegrees * (.pi / 180)
+            let offsetPositioning = CGPoint(x: CGFloat(0), y: CGFloat(cell.contentView.frame.size.height * 4))
+            var transform: CATransform3D = CATransform3DIdentity
+            transform = CATransform3DRotate(transform, rotationAngleRadians, -50.0, 0.0, 1.0)
+            transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, -50.0)
+            cellContentView?.layer.transform = transform
+            cellContentView?.layer.opacity = 0.8
+            
+            UIView.animate(withDuration: 0.65, delay: 0o0, usingSpringWithDamping: 0.85, initialSpringVelocity: 0.8, options: [], animations: {() -> Void in
+                cellContentView?.layer.transform = CATransform3DIdentity
+                cellContentView?.layer.opacity = 1
+            }, completion: {(_ finished: Bool) -> Void in
+            })
+        } else if (animationType == "RightToLeft") {
+            let cellContentView: UIView? = cell.contentView
+            let rotationAngleDegrees: CGFloat = -30
+            let rotationAngleRadians: CGFloat = rotationAngleDegrees * (.pi / 180)
+            let offsetPositioning = CGPoint(x: CGFloat(500), y: CGFloat(-20.0))
+            var transform: CATransform3D = CATransform3DIdentity
+            transform = CATransform3DRotate(transform, rotationAngleRadians, -50.0, 0.0, 1.0)
+            transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, -50.0)
+            cellContentView?.layer.transform = transform
+            cellContentView?.layer.opacity = 0.8
+            UIView.animate(withDuration: 0.65, delay: 0.0, usingSpringWithDamping: 0.85, initialSpringVelocity: 0.8, options: [], animations: {() -> Void in
+            cellContentView?.layer.transform = CATransform3DIdentity
+            cellContentView?.layer.opacity = 1
+            }, completion: {(_ finished: Bool) -> Void in
+            })
+        }
+        
+    }
 }

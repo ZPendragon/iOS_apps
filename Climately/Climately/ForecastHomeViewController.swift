@@ -9,17 +9,11 @@
 import UIKit
 import CoreLocation
 
-class ForecastHomeViewController: UIViewController {
-    
-    /**
-        - Home screen of application (initial VC)
-        - Determines location in the event of immediate forecast query
-        - Displays bubble menu of saved forecast locations
-        - Status bar with hamburger menu and add forceast in the top right
-     
-     
-     */
-    
+protocol PageNavigationDelegate {
+    func dismissViewController()
+}
+
+final class ForecastHomeViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -29,17 +23,19 @@ class ForecastHomeViewController: UIViewController {
     // TODO: Build a loop animation that loops through our image dictionary and displays different backgrounds
     @IBOutlet weak var getWeatherBtn: UIButton!
     fileprivate let locationManager = CLLocationManager()
+    fileprivate var selectedIndex: Int?
+    fileprivate var menuButton: HamburgerButton?
+    
+    // MARK: - Sample Values
     fileprivate let testImages: [UIImage] = [UIImage(named: "cityscape_0")!,
-                                            UIImage(named: "cityscape_1")!,
-                                            UIImage(named: "cityscape_2")!,
-                                            UIImage(named: "currentLocation")!]
-
+                                             UIImage(named: "cityscape_1")!,
+                                             UIImage(named: "cityscape_2")!,
+                                             UIImage(named: "currentLocation")!]
+    
     fileprivate let testCityState: [cityState] = [("Boston","MA"),
                                                   ("Boston","MA"),
                                                   ("Boston","MA"),
                                                   ("Boston","MA")]
-    fileprivate var selectedIndex: Int?
-    fileprivate var menuButton: HamburgerButton?
     
     // MARK: - Setup
     
@@ -97,8 +93,14 @@ class ForecastHomeViewController: UIViewController {
         guard let showsMenu = self.menuButton?.showsMenu else {return}
         self.menuButton?.showsMenu = !showsMenu
         
-        // Modal With enter a city / state
-        
+        if showsMenu {
+            self.dismiss(animated: true) {
+                
+            }
+        } else {
+            // Modal With enter a city / state
+            performSegue(withIdentifier: "showModalForm", sender: UIButton.self)
+        }
     }
     
     // MARK: - Navigation
@@ -110,6 +112,9 @@ class ForecastHomeViewController: UIViewController {
             guard let index = self.selectedIndex else { return }
             destinationController?.navigationItem.title = testCityState[index].0
             destinationController?.searchQuery = testCityState[index]
+        } else if segue.identifier == "showModalForm" {
+            let vc = segue.destination
+            vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         }
     }
 }
