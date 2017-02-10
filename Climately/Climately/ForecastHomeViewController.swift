@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ForecastHomeViewController
 //  Climately
 //
 //  Created by Kevin Zeckser on 3/28/16.
@@ -40,7 +40,7 @@ final class ForecastHomeViewController: UIViewController {
     // MARK: - Setup
     
     fileprivate func setupVC() {
-        self.backgroundImage = UIImageView(image: UIImage(named: "background_1"))
+//        self.backgroundImage = UIImageView(image: UIImage(named: "background_1"))
     }
     
     fileprivate func setupBubbleMenu() {

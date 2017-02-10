@@ -8,7 +8,6 @@
 
 import UIKit
 
-/* The heights are declared as constants outside of the class so they can be easily referenced elsewhere */
 struct WeeklyvisualLayoutConstants {
     struct Cell {
         /* The height of the non-featured cell */
@@ -80,28 +79,22 @@ class WeeklyvisualLayout: UICollectionViewLayout {
         var y: CGFloat = 0
         
         for item in 0..<numberOfItems {
-            // 1
             let indexPath = NSIndexPath(item: item, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath as IndexPath)
-            
-            // 2
             attributes.zIndex = item
             var height = standardHeight
             
-            // 3
+            
             if indexPath.item == featuredItemIndex {
-                // 4
                 let yOffset = standardHeight * nextItemPercentageOffset
                 y = collectionView!.contentOffset.y - yOffset
                 height = featuredHeight
             } else if indexPath.item == (featuredItemIndex + 1) && indexPath.item != numberOfItems {
-                // 5
                 let maxY = y + standardHeight
                 height = standardHeight + max((featuredHeight - standardHeight) * nextItemPercentageOffset, 0)
                 y = maxY - height
             }
             
-            // 6
             frame = CGRect(x: 0, y: y, width: width, height: height)
             attributes.frame = frame
             cache.append(attributes)
